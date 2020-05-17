@@ -3,11 +3,11 @@
 ## Overview
 
 This is a simple Rest API fetching weather information of a specified city written in Python.
-This API is using a DARK SKY api to obtain weather informaiton, so you need to get one.
+This API is using a Dark Sky API to obtain weather informaiton, so you need to get one.
 
 ## Prerequisites
 
-* DARK SKY API Key
+* Dark Sky API Key
 
 ## Required Python Libraries
 
@@ -20,6 +20,7 @@ This API is using a DARK SKY api to obtain weather informaiton, so you need to g
 While app.py is running, simply access the url with location where you want to know weather info
 
 For example:
+
 * Access http://localhost:5000/location
 * The following json is returned as a result
 
@@ -34,7 +35,7 @@ For example:
 
 ### 1. Run locally using Docker container
 
-You can test this API locally by running a docker container. 
+You can test this API locally by running a docker container
 
     # use an official python container
     ## '-it': connect the docker container through a pseudo tty
@@ -66,6 +67,7 @@ You can test this API locally by running a docker container.
 To deploy this api on heroku, you need to either create a heroku account or have a heroku account already.
 Also, you need to install heroku cli to have the following work properly.
 For more details, please go to heroku's documentation about deploying a python app.
+Files required to deploy this API to heroku is already in place, so you don't need to additionally create them.
 
     # initialize git inside the directory
     git init 
@@ -82,7 +84,7 @@ For more details, please go to heroku's documentation about deploying a python a
     git push heroku master
 
     # query the target url with curl
-    curl https://myweatherapi.herokuapp.com/london                                   (git)-[master]
+    curl https://myweatherapi.herokuapp.com/london
     
     #output
     #{"location":"London, Greater London, England, SW1A 2DX, United Kingdom","temp_max":"69.86\u00b0F","temp_min":"47.03\u00b0F","weather":"Mostly cloudy throughout the day."}
@@ -91,4 +93,4 @@ For more details, please go to heroku's documentation about deploying a python a
 
 Apparently Dark Sky API will terminate its service at the end of 2021.
 It seems that they have already stopped accepting new registrations, so unfortunately this API can only be used by those who already have the API key.
-I may change the source to obtain weather info, but for now it remains as it. 
+I may change the source to obtain weather info, but for now it remains as it.
